@@ -1,4 +1,4 @@
-export const isLoading = (bool) => ({
+export const checkIsLoading = (bool) => ({
   type: 'IS_LOADING',
   isLoading: bool
 })
