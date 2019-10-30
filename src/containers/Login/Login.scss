@@ -1,0 +1,28 @@
+.form-sign-in {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  div {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form-label {
+
+  }
+
+  .form__input {
+    height: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+  }
+
+  .form__button {
+    height: 20px;
+    margin-bottom: 20px;
+    width: 100px;
+  }
+}
