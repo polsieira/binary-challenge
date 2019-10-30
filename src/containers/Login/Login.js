@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import RaisedButton from 'material-ui/RaisedButton';
+import TextField from 'material-ui/TextField';
 import { hasErrored } from '../../actions';
 import './Login.scss';
 import { Redirect } from 'react-router-dom';
@@ -57,40 +59,30 @@ export class Login extends Component {
     const { error } = this.props;
     return (
       <div className='Login'>
-        <form className='form-sign-in' onSubmit={e => this.handleSubmit(e)}>
-          {error ? (<p className='login-message login-error'>{error}</p>) :
-            (<p className='login-message'>Sign in with your email</p>)}
-          <div>
-            <label htmlFor='email' className='form-label'>
-              Your email
-          </label>
-            <input
-              id='email'
-              type='text'
-              placeholder='your@email.com'
-              className={error ? 'form__input form__input--error' : 'form__input'}
-              name='email'
-              value={email}
-              onChange={e => this.handleChange(e)}
-            ></input>
-          </div>
-          <div>
-            <label htmlFor='password' className='form__label'>
-              Your password
-          </label>
-            <input
-              id='password'
-              type='password'
-              className={error ? 'form__input form__input--error' : 'form__input'}
-              name='password'
-              placeholder='Must have at least 8 characters'
-              value={password}
-              onChange={e => this.handleChange(e)}
-            ></input>
-          </div>
-          <button type='submit' className='form__button'>Sign In</button>
-        </form>
-      </div>
+        <TextField
+          id='email'
+          type='text'
+          placeholder='your@email.com'
+          className={error ? 'form__input form__input--error' : 'form__input'}
+          name='email'
+          value={email}
+          onChange={e => this.handleChange(e)}
+          hintText="Enter your Username"
+          floatingLabelText="Username"
+        />
+        <TextField
+          type="password"
+          hintText="Enter your Password"
+          floatingLabelText="Password"
+          id='password'
+          className={error ? 'form__input form__input--error' : 'form__input'}
+          name='password'
+          placeholder='Must have at least 8 characters'
+          value={password}
+          onChange={e => this.handleChange(e)}
+        />
+        <RaisedButton label="Login" className='form__button' primary="true" onClick={(event) => this.handleClick(event)} />
+      </div >
     );
   }
 }

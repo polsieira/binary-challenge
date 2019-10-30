@@ -14,7 +14,8 @@ class App extends Component {
   async componentDidMount() {
     const { checkIsLoading, hasErrored } = this.props;
     //https://api.betterdoctor.com/2016-03-01/doctors?name=%3Aname&first_name=%3Afirst_name&last_name=%3Alast_name&query=%3Aquery&specialty_uid=%3Aspecialty_uid&insurance_uid=%3Aspecialty_uid&practice_uid=%3Apractice_uid&location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&gender=male&
-    const url = 'https://api.betterdoctor.com/2016-03-01/doctors?location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=10&user_key=1ac2abd6f94242154ff7cef2b1137a83';
+    var apiBaseUrl = "https://api.betterdoctor.com/2016-03-01/";
+    const url = `${apiBaseUrl}doctors?location=37.773%2C-122.413%2C100&user_location=37.773%2C-122.413&skip=0&limit=10&user_key=1ac2abd6f94242154ff7cef2b1137a83`;
     try {
       checkIsLoading(true);
       const data = await getData(url);
@@ -54,7 +55,7 @@ App.propTypes = {
   hasErrored: PropTypes.func,
   checkIsLoading: PropTypes.func,
   error: PropTypes.string,
-  isLoading: PropTypes.string,
+  isLoading: PropTypes.bool,
 }
 
 
