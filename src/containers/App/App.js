@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './App.scss';
 import { Route } from 'react-router-dom';
-import { Login } from '../Login/Login';
-import { CreateAccount } from '../CreateAccount/CreateAccount';
+import AccountManager from '../../components/AccountManager/AccountManager';
+import Footer from '../../components/Footer/Footer';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { getData } from '../../apiCalls';
@@ -31,7 +31,8 @@ class App extends Component {
   render() {
     return (
       <main className='App'>
-        <Route path='/login' render={() => (<Login />)} />
+        <Route path='/account' render={() => (<AccountManager />)} />
+        <Footer />
       </main>
     )
   }
