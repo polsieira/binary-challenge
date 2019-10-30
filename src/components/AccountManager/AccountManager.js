@@ -10,16 +10,16 @@ export const AccountManager = () => {
     <>
       <div className='modal-container'>
         <ul className='modal-tabs'>
-          <NavLink to='/login' className='form-navlink'>
+          <NavLink to='/account/login' className='form-navlink'>
             <li className='login_tab'>Log In</li>
           </NavLink>
-          <NavLink to='/create-account' className='form-navlink'>
+          <NavLink to='/account/create-account' className='form-navlink'>
             <li className='login_tab'>Create Account</li>
           </NavLink>
         </ul>
-        <Route exact path='/login' render={() => <Login />}
+        <Route exact path='/account/login' render={() => <Login />}
         />
-        <Route exact path='/create-account' render={() => <CreateAccount />} />
+        <Route exact path='/account/create-account' render={() => <CreateAccount />} />
       </div>
     </>
   );

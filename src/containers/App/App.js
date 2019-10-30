@@ -17,7 +17,7 @@ class App extends Component {
     const apiBaseUrl = "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?";
     // const api_key = "";
     const table = "table=exoplanets";
-    const columns = "&select=pl_hostname,ra,dec";
+    const columns = "&select=pl_hostname,pl_orbper,pl_bmassj,pl_masse,pl_radj,pl_rade,pl_nnotes,st_dist,pl_eqt,pl_disc,pl_mnum,pl_pelink,pl_edelink";
     const parameters = "&order=dec";
     const format = "&format=json"
     const url = `${apiBaseUrl}${table}${columns}${parameters}${format}`;

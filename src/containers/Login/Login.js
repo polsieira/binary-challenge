@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import { hasErrored } from '../../actions';
+import { hasErrored, loginUser, checkIsLoading } from '../../actions';
 import './Login.scss';
 import { Redirect } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
+import { attemptLoginUser } from '../../apiCalls';
 
 export class Login extends Component {
   constructor() {
@@ -26,12 +27,20 @@ export class Login extends Component {
 
   handleClick = async () => {
     const { hasErrored } = this.props;
+    const { email, password, isLoggedIn } = this.state;
     try {
-      //fetch user data
-      //set user to store
-      //login 
+      checkIsLoading(true);
+      const userCheck = await attemptLoginUser({ email, password });
+      console.log(userCheck)
+      checkIsLoading(false);
+      this.setState({ isLoggedIn: true });
+      loginUser({
+        ...userCheck,
+        isLoggedIn
+      });
       hasErrored('');
     } catch ({ message }) {
+      checkIsLoading(false);
       hasErrored(message);
     }
     this.clearInputs();
@@ -94,7 +103,11 @@ export const mapStateToProps = ({ movies, errMsg, isLoading }) => ({
 });
 
 export const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ hasErrored }, dispatch);
+  return bindActionCreators({
+    hasErrored,
+    loginUser,
+    checkIsLoading
+  }, dispatch);
 };
 
 export default connect(

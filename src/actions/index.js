@@ -12,3 +12,8 @@ export const addExoplanets = (exoplanets) => ({
   type: 'ADD_EXOPLANETS',
   exoplanets
 })
+
+export const loginUser = (userInfo) => ({
+  type: 'LOGIN_USER',
+  userInfo
+})
