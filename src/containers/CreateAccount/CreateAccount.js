@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import './CreateAccount.scss';
 import PropTypes from 'prop-types';
 
-export class SignUpForm extends Component {
+export class CreateAccount extends Component {
   constructor() {
     super();
     this.state = {
@@ -109,9 +109,9 @@ export const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SignUpForm);
+)(CreateAccount);
 
-SignUpForm.propTypes = {
+CreateAccount.propTypes = {
   error: PropTypes.string,
   hasErrored: PropTypes.func,
   isLoading: PropTypes.bool,
