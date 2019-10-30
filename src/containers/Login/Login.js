@@ -26,7 +26,7 @@ export class Login extends Component {
   };
 
   handleClick = async () => {
-    const { hasErrored } = this.props;
+    const { hasErrored, loginUser } = this.props;
     const { email, password, isLoggedIn } = this.state;
     try {
       checkIsLoading(true);
@@ -36,7 +36,7 @@ export class Login extends Component {
       this.setState({ isLoggedIn: true });
       loginUser({
         ...userCheck,
-        isLoggedIn
+        isLoggedIn: true
       });
       hasErrored('');
     } catch ({ message }) {
@@ -106,7 +106,7 @@ export const mapDispatchToProps = dispatch => {
   return bindActionCreators({
     hasErrored,
     loginUser,
-    checkIsLoading
+    checkIsLoading,
   }, dispatch);
 };
 
