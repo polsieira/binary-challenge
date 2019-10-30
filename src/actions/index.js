@@ -7,3 +7,8 @@ export const hasErrored = (message) => ({
   type: 'HAS_ERRORED',
   message
 })
+
+export const addExoplanets = (exoplanets) => ({
+  type: 'ADD_EXOPLANETS',
+  exoplanets
+})

@@ -8,13 +8,12 @@ import Footer from '../../components/Footer/Footer';
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { getData } from '../../apiCalls';
-import { checkIsLoading, hasErrored } from '../../actions';
+import { checkIsLoading, hasErrored, addExoplanets } from '../../actions';
 
 class App extends Component {
 
   async componentDidMount() {
-    const { checkIsLoading, hasErrored } = this.props;
-    //https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?&table=exoplanets&format=ipac&where=pl_kepflag=1
+    const { checkIsLoading, hasErrored, addExoplanets } = this.props;
     const apiBaseUrl = "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?";
     // const api_key = "";
     const table = "table=exoplanets";
@@ -26,8 +25,7 @@ class App extends Component {
       checkIsLoading(true);
       const data = await getData(url);
       checkIsLoading(false);
-      console.log(data);
-      // save data to store with action
+      addExoplanets(data);
     } catch ({ message }) {
       checkIsLoading(false);
       hasErrored(message);
@@ -53,7 +51,8 @@ export const mapStateToProps = ({ isLoading, error }) => ({
 export const mapDispatchToProps = dispatch => (
   bindActionCreators({
     checkIsLoading,
-    hasErrored
+    hasErrored,
+    addExoplanets
   }, dispatch)
 )
 
