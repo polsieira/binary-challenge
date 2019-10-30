@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import RaisedButton from 'material-ui/RaisedButton';
-import TextField from 'material-ui/TextField';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
 import { hasErrored } from '../../actions';
 import './Login.scss';
 import { Redirect } from 'react-router-dom';
@@ -81,7 +81,7 @@ export class Login extends Component {
           value={password}
           onChange={e => this.handleChange(e)}
         />
-        <RaisedButton label="Login" className='form__button' primary="true" onClick={(event) => this.handleClick(event)} />
+        <Button label="Login" className='form__button' primary="true" onClick={(event) => this.handleClick(event)} />
       </div >
     );
   }
