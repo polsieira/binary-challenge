@@ -13,7 +13,7 @@ export const AccountManager = () => {
           <NavLink to='/login' className='form-navlink'>
             <li className='login_tab'>Log In</li>
           </NavLink>
-          <NavLink to='/signup' className='form-navlink'>
+          <NavLink to='/create-account' className='form-navlink'>
             <li className='login_tab'>Create Account</li>
           </NavLink>
         </ul>
