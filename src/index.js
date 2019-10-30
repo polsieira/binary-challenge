@@ -5,8 +5,8 @@ import { createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { HashRouter } from 'react-router-dom'
 import rootReducer from './reducers';
-import App from './components/App';
-import './index.css';
+import App from './containers/App/App';
+import './index.scss';
 
 const store = createStore(rootReducer, composeWithDevTools());
 

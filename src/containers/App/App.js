@@ -1,6 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './App.scss';
+import { Route } from 'react-router-dom';
+import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types'
 
 class App extends Component {
   constructor() {
@@ -15,9 +18,14 @@ class App extends Component {
   }
 
   render() {
-
+    return (
+      <section>
+      </section>
+    )
   }
 }
+
+export default App;
 
 
 
