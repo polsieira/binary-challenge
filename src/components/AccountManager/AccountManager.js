@@ -28,5 +28,5 @@ export const AccountManager = () => {
 export default AccountManager;
 
 AccountManager.propTypes = {
-  loadMovieData: PropTypes.func
+
 };
