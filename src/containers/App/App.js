@@ -19,8 +19,9 @@ class App extends Component {
 
   render() {
     return (
-      <section>
-      </section>
+      <main>
+        <h1>App</h1>
+      </main>
     )
   }
 }
