@@ -17,3 +17,8 @@ export const loginUser = (userInfo) => ({
   type: 'LOGIN_USER',
   userInfo
 })
+
+export const addFilters = (filters) => ({
+  type: 'ADD_FILTERS',
+  filters
+})
