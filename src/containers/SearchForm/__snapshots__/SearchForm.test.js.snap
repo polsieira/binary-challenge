@@ -67,6 +67,7 @@ exports[`SearchForm SearchForm component should match the snapshot 1`] = `
     </div>
     <button
       className="search-button"
+      onClick={[Function]}
       type="button"
     >
       <SearchIcon
