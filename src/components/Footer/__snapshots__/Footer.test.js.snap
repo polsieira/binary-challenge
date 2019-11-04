@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer Footer component should match a snapshot 1`] = `
+<div
+  className="Footer"
+>
+  <img
+    alt="special thanks to NASA"
+    src="https://exoplanetarchive.ipac.caltech.edu/images/logos/NASA_small.jpg"
+  />
+  <img
+    alt="special thanks to CalTech"
+    src="https://exoplanetarchive.ipac.caltech.edu/images/logos/Caltech_LOGO-Orange_PMS165.jpg"
+  />
+</div>
+`;
