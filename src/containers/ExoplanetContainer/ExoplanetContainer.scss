@@ -1,0 +1,37 @@
+.ExoplanetContainer {
+  background: white;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px rgb(211, 211, 211);
+  display: inline-block;
+  height: 50vh;
+  overflow: scroll;
+  width: 97%;
+
+  .loading-message {
+    font-size: 100px;
+  }
+
+  ul {
+    align-items: center;
+    display: flex;
+    height: 50px;
+    justify-content: space-around;
+    margin: 0px;
+    padding: 0px;
+
+    li:first-child {
+      border-left: none;
+    }
+
+    li {
+      align-items: center;
+      border-top: rgb(211, 211, 211) solid 2px;
+      border-bottom: rgb(211, 211, 211) solid 2px;
+      border-left: rgb(211, 211, 211) solid 2px;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      width: 20%;
+    }
+  }
+}
