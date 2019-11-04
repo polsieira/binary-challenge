@@ -39,10 +39,11 @@ exports[`SearchForm SearchForm component should match the snapshot 1`] = `
       <WithStyles(ForwardRef(Slider))
         aria-labelledby="range-slider"
         id="gravity"
-        max={100}
-        min={0.0001}
+        max={2}
+        min={0.001}
         name="gravity"
         onChange={[Function]}
+        step={0.02}
         track="inverted"
         valueLabelDisplay="auto"
       />
