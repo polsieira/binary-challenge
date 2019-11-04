@@ -40,9 +40,10 @@ export class SearchForm extends Component {
             <Slider
               id="distance"
               name="distance"
-              onChange={(event, value, id) => this.handleChange(event, value, "distance")}
+              onChange={(event, value) => this.handleChange(event, value, "distance")}
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
+              track="inverted"
               min={0}
               max={100}
             />
@@ -54,9 +55,10 @@ export class SearchForm extends Component {
             <Slider
               id="gravity"
               name="gravity"
-              onChange={(event, value, id) => this.handleChange(event, value, "gravity")}
+              onChange={(event, value) => this.handleChange(event, value, "gravity")}
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
+              track="inverted"
               min={0.0001}
               max={100}
             />
@@ -68,9 +70,10 @@ export class SearchForm extends Component {
             <Slider
               id="year"
               name="year"
-              onChange={(event, value, id) => this.handleChange(event, value, "year")}
+              onChange={(event, value) => this.handleChange(event, value, "year")}
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
+              track="inverted"
               min={1}
               max={2000}
             />
