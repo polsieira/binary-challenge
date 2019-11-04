@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Login component should match the snapshot 1`] = `
+<div
+  className="Login"
+>
+  <h2
+    className="login-message"
+  >
+    Login in with email and password
+  </h2>
+  <WithStyles(ForwardRef(TextField))
+    autoComplete="current-email"
+    className="form__input"
+    color="primary"
+    helperText="Incorrect email"
+    id="email"
+    label="Email"
+    margin="normal"
+    name="email"
+    onChange={[Function]}
+    placeholder="your@email.com"
+    type="text"
+    value=""
+    variant="filled"
+  />
+  <WithStyles(ForwardRef(TextField))
+    autoComplete="current-password"
+    className="form__input"
+    color="secondary"
+    helperText="Incorrect password"
+    id="password"
+    label="Password"
+    margin="normal"
+    name="password"
+    onChange={[Function]}
+    placeholder="Must have at least 8 characters"
+    type="password"
+    value=""
+  />
+  <WithStyles(ForwardRef(Button))
+    className="form__button"
+    onClick={[Function]}
+    primary="true"
+  >
+    Login
+  </WithStyles(ForwardRef(Button))>
+</div>
+`;
+
+exports[`Login Login component should match the snapshot when there is an error 1`] = `
+<div
+  className="Login"
+>
+  <h2
+    className="login-message"
+  >
+    <Component />
+  </h2>
+  <WithStyles(ForwardRef(TextField))
+    autoComplete="current-email"
+    className="form__input form__input--error"
+    color="primary"
+    helperText="Incorrect email"
+    id="email"
+    label="Email"
+    margin="normal"
+    name="email"
+    onChange={[Function]}
+    placeholder="your@email.com"
+    type="text"
+    value=""
+    variant="filled"
+  />
+  <WithStyles(ForwardRef(TextField))
+    autoComplete="current-password"
+    className="form__input form__input--error"
+    color="secondary"
+    helperText="Incorrect password"
+    id="password"
+    label="Password"
+    margin="normal"
+    name="password"
+    onChange={[Function]}
+    placeholder="Must have at least 8 characters"
+    type="password"
+    value=""
+  />
+  <WithStyles(ForwardRef(Button))
+    className="form__button"
+    onClick={[Function]}
+    primary="true"
+  >
+    Login
+  </WithStyles(ForwardRef(Button))>
+</div>
+`;

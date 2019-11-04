@@ -9,6 +9,8 @@ import { Redirect } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import { attemptLoginUser } from '../../apiCalls';
 
+
+
 export class Login extends Component {
   constructor() {
     super();
@@ -27,11 +29,10 @@ export class Login extends Component {
 
   handleClick = async () => {
     const { hasErrored, loginUser } = this.props;
-    const { email, password, isLoggedIn } = this.state;
+    const { email, password } = this.state;
     try {
       checkIsLoading(true);
       const userCheck = await attemptLoginUser({ email, password });
-      console.log(userCheck)
       checkIsLoading(false);
       this.setState({ isLoggedIn: true });
       loginUser({
@@ -40,6 +41,7 @@ export class Login extends Component {
       });
       hasErrored('');
     } catch ({ message }) {
+      console.log(message)
       checkIsLoading(false);
       hasErrored(message);
     }
@@ -60,45 +62,57 @@ export class Login extends Component {
     this.handleClick();
   };
 
+
+
   render() {
     if (this.state.isLoggedIn) {
       return <Redirect to='/' />;
     }
+
     const { email, password } = this.state;
     const { error } = this.props;
     return (
-      <div className='Login'>
-        <TextField
-          id='email'
-          type='text'
-          placeholder='your@email.com'
-          className={error ? 'form__input form__input--error' : 'form__input'}
-          name='email'
-          value={email}
-          onChange={e => this.handleChange(e)}
-          hintText="Enter your Username"
-          floatingLabelText="Username"
-        />
-        <TextField
-          type="password"
-          hintText="Enter your Password"
-          floatingLabelText="Password"
-          id='password'
-          className={error ? 'form__input form__input--error' : 'form__input'}
-          name='password'
-          placeholder='Must have at least 8 characters'
-          value={password}
-          onChange={e => this.handleChange(e)}
-        />
-        <Button label="Login" className='form__button' primary="true" onClick={(event) => this.handleClick(event)} />
-      </div >
+        <div className='Login'>
+          <h2 className='login-message'>{error ? { error } : 'Login in with email and password'}</h2>
+          <TextField
+            id='email'
+            type='text'
+            placeholder='your@email.com'
+            className={error ? 'form__input form__input--error' : 'form__input'}
+            name='email'
+            value={email}
+            onChange={e => this.handleChange(e)}
+            label="Email"
+            autoComplete="current-email"
+            margin="normal"
+            variant="filled"
+            color="primary"
+            helperText="Incorrect email"
+          />
+          <TextField
+            type="password"
+            label="Password"
+            id='password'
+            className={error ? 'form__input form__input--error' : 'form__input'}
+            name='password'
+            placeholder='Must have at least 8 characters'
+            value={password}
+            onChange={e => this.handleChange(e)}
+            autoComplete="current-password"
+            margin="normal"
+            color="secondary"
+            helperText="Incorrect password"
+          />
+          <Button className='form__button' primary="true" onClick={(event) => this.handleClick(event)}>
+            Login
+          </Button>
+        </div >
     );
   }
 }
 
-export const mapStateToProps = ({ movies, errMsg, isLoading }) => ({
-  movies,
-  errMsg,
+export const mapStateToProps = ({ error, isLoading }) => ({
+  error,
   isLoading
 });
 

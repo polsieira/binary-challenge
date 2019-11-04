@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
-import { hasErrored, checkIsLoading } from '../../actions';
+import { hasErrored, checkIsLoading, loginUser } from '../../actions';
 import { bindActionCreators } from 'redux';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { connect } from 'react-redux';
 import './CreateAccount.scss';
+import { attemptCreateUser } from '../../apiCalls';
 import PropTypes from 'prop-types';
 
 export class CreateAccount extends Component {
@@ -25,14 +26,22 @@ export class CreateAccount extends Component {
     });
   };
 
-  handleClick = async () => {
-    const { hasErrored } = this.props;
+  handleClick = async (event) => {
+    event.preventDefault();
+    const { hasErrored, loginUser } = this.props;
+    const { name, email, password } = this.state;
     try {
-      //fetch user data
-      //set user to store
+      checkIsLoading(true);
+      const userCheck = await attemptCreateUser({ name, email, password });
+      checkIsLoading(false);
       this.setState({ isLoggedIn: true });
+      loginUser({
+        ...userCheck,
+        isLoggedIn: true
+      });
       hasErrored('');
     } catch ({ message }) {
+      checkIsLoading(false);
       hasErrored(message);
     }
     this.clearInputs();
@@ -47,11 +56,6 @@ export class CreateAccount extends Component {
     );
   };
 
-  handleSubmit = event => {
-    event.preventDefault();
-    this.handleClick();
-  };
-
   render() {
     if (this.state.isLoggedIn) {
       return <Redirect to='/' />;
@@ -59,17 +63,19 @@ export class CreateAccount extends Component {
     const { name, email, password } = this.state;
     const { error } = this.props;
     return (
-      <div className='Login'>
+      <div className='CreateAccount'>
+        <h2 className='create-account-message'>{error ? { error } : 'Create account with name, email and password'}</h2>
         <TextField
           type="name"
-          hintText="Enter your name"
-          floatingLabelText="Name"
+          label="Name"
           id='name'
           className={error ? 'form__input form__input--error' : 'form__input'}
           name='name'
           placeholder="John Smith"
           value={name}
           onChange={e => this.handleChange(e)}
+          autoComplete="current-password"
+          margin="normal"
         />
         <TextField
           id='email'
@@ -79,21 +85,25 @@ export class CreateAccount extends Component {
           name='email'
           value={email}
           onChange={e => this.handleChange(e)}
-          hintText="Enter your Username"
-          floatingLabelText="Username"
+          label="Username"
+          autoComplete="current-password"
+          margin="normal"
         />
         <TextField
           type="password"
-          hintText="Enter your Password"
-          floatingLabelText="Password"
+          label="Password"
           id='password'
           className={error ? 'form__input form__input--error' : 'form__input'}
           name='password'
           placeholder='Must have at least 8 characters'
           value={password}
           onChange={e => this.handleChange(e)}
+          autoComplete="current-password"
+          margin="normal"
         />
-        <Button label="Login" className='form__button' primary="true" onClick={(event) => this.handleClick(event)} />
+        <Button label="Login" className='form__button' primary="true" onClick={(event) => this.handleClick(event)} >
+          Create Account
+        </Button>
       </div >
     );
   }
@@ -105,7 +115,7 @@ export const mapStateToProps = ({ error, isLoading }) => ({
 });
 
 export const mapDispatchToProps = dispatch => {
-  return bindActionCreators({ checkIsLoading, hasErrored }, dispatch);
+  return bindActionCreators({ checkIsLoading, hasErrored, loginUser }, dispatch);
 };
 
 export default connect(

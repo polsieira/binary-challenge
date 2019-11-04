@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateAccount CreateAccount component should match the snapshot 1`] = `
+<div
+  className="CreateAccount"
+>
+  <h2
+    className="create-account-message"
+  >
+    Create account with name, email and password
+  </h2>
+  <WithStyles(ForwardRef(TextField))
+    autoComplete="current-password"
+    className="form__input"
+    id="name"
+    label="Name"
+    margin="normal"
+    name="name"
+    onChange={[Function]}
+    placeholder="John Smith"
+    type="name"
+    value=""
+  />
+  <WithStyles(ForwardRef(TextField))
+    autoComplete="current-password"
+    className="form__input"
+    id="email"
+    label="Username"
+    margin="normal"
+    name="email"
+    onChange={[Function]}
+    placeholder="your@email.com"
+    type="text"
+    value=""
+  />
+  <WithStyles(ForwardRef(TextField))
+    autoComplete="current-password"
+    className="form__input"
+    id="password"
+    label="Password"
+    margin="normal"
+    name="password"
+    onChange={[Function]}
+    placeholder="Must have at least 8 characters"
+    type="password"
+    value=""
+  />
+  <WithStyles(ForwardRef(Button))
+    className="form__button"
+    label="Login"
+    onClick={[Function]}
+    primary="true"
+  >
+    Create Account
+  </WithStyles(ForwardRef(Button))>
+</div>
+`;
+
+exports[`CreateAccount CreateAccount component should match the snapshot when there is an error 1`] = `
+<div
+  className="CreateAccount"
+>
+  <h2
+    className="create-account-message"
+  >
+    <Component />
+  </h2>
+  <WithStyles(ForwardRef(TextField))
+    autoComplete="current-password"
+    className="form__input form__input--error"
+    id="name"
+    label="Name"
+    margin="normal"
+    name="name"
+    onChange={[Function]}
+    placeholder="John Smith"
+    type="name"
+    value=""
+  />
+  <WithStyles(ForwardRef(TextField))
+    autoComplete="current-password"
+    className="form__input form__input--error"
+    id="email"
+    label="Username"
+    margin="normal"
+    name="email"
+    onChange={[Function]}
+    placeholder="your@email.com"
+    type="text"
+    value=""
+  />
+  <WithStyles(ForwardRef(TextField))
+    autoComplete="current-password"
+    className="form__input form__input--error"
+    id="password"
+    label="Password"
+    margin="normal"
+    name="password"
+    onChange={[Function]}
+    placeholder="Must have at least 8 characters"
+    type="password"
+    value=""
+  />
+  <WithStyles(ForwardRef(Button))
+    className="form__button"
+    label="Login"
+    onClick={[Function]}
+    primary="true"
+  >
+    Create Account
+  </WithStyles(ForwardRef(Button))>
+</div>
+`;

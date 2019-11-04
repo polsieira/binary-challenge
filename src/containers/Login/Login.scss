@@ -1,28 +1,32 @@
-.form-sign-in {
-  align-items: center;
+.Login {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-
-  div {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+  height: 64vh;
+  padding-top: 20px;
+  text-align: center;
+    
+  .login-message {
+    color: black;
+    font-size: 18px;
+    margin-top: 40px;;
+  }
+  
+  .label {
+    color: black;
   }
 
-  .form-label {
-
+  .MuiFormControl-root {
+    align-self: center;
+    color: black;
+    width: 50%;
   }
 
-  .form__input {
-    height: 20px;
-    margin-bottom: 20px;
-    width: 100px;
-  }
-
-  .form__button {
-    height: 20px;
-    margin-bottom: 20px;
-    width: 100px;
+  .MuiButtonBase-root {
+    align-self: center;
+    background: #282727;
+    color: white;
+    height: 40px;
+    margin-top: 20px;
+    width: 50%;
   }
 }

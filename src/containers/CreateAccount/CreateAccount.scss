@@ -1,0 +1,32 @@
+.CreateAccount {
+  display: flex;
+  flex-direction: column;
+  height: 64vh;
+  padding-top: 20px;
+  text-align: center;
+    
+  .create-account-message {
+    color: black;
+    font-size: 18px;
+    margin-top: 40px;;
+  }
+
+  .label {
+    color: black;
+  }
+
+  .MuiFormControl-root {
+    align-self: center;
+    color: black;
+    width: 50%;
+  }
+
+  .MuiButtonBase-root {
+    align-self: center;
+    background: #282727;
+    color: white;
+    height: 40px;
+    margin-top: 20px;
+    width: 50%;
+  }
+}
