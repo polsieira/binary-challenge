@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Welcome AccountManager component should match a snapshot 1`] = `
+<div
+  className="Welcome"
+>
+  <h1
+    className="welcome-message"
+  >
+    Don't limit yourself to just one planet
+  </h1>
+</div>
+`;
