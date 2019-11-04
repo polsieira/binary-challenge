@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExoplanetPage ExoplanetPage component should match the snapshot 1`] = `
+<div
+  className="ExoplanetPage"
+>
+  <p>
+    exoplanet
+  </p>
+  <p>
+    star
+  </p>
+</div>
+`;
