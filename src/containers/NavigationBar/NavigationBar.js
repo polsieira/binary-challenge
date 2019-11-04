@@ -9,8 +9,9 @@ import './NavigationBar.scss'
 import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { loginUser } from '../../actions';
+import logo from '../../assets/EXOGO.svg';
 
-const NavigationBar = ({ user, loginUser }) => {
+export const NavigationBar = ({ user, loginUser }) => {
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -22,7 +23,6 @@ const NavigationBar = ({ user, loginUser }) => {
   const handleClose = (e) => {
     setAnchorEl(null);
     if (e.target.id === 'logout') {
-      console.log(loginUser)
       loginUser({
         name: '',
         id: null,
@@ -33,7 +33,7 @@ const NavigationBar = ({ user, loginUser }) => {
 
   return (
     <nav className="NavigationBar">
-      <h1 className="logo">ExoGo</h1>
+      <img className="logo" alt="exogo logo" src={logo} />
       {user.isLoggedIn ?
         <>
           <Button className="menu-button" aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
@@ -47,11 +47,11 @@ const NavigationBar = ({ user, loginUser }) => {
             onClose={handleClose}
             TransitionComponent={Fade}
           >
-            <MenuItem id='saved-exoplanets' onClick={(e) => this.handleClose(e)}>Saved Exoplanets</MenuItem>
+            <MenuItem id='saved-exoplanets' onClick={handleClose}>Saved Exoplanets</MenuItem>
             <MenuItem id='logout' onClick={handleClose}>Logout</MenuItem>
           </Menu>
         </> :
-        <Link to='/account/login' >
+        <Link to='/login' >
           <Button className="menu-button" onClick={handleClick}>
             Login
           </Button>

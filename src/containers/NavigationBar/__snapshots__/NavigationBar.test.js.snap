@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavigationBar NavigationBar component should match the snapshot 1`] = `
+<nav
+  className="NavigationBar"
+>
+  <img
+    alt="exogo logo"
+    className="logo"
+    src="EXOGO.svg"
+  />
+  <WithStyles(ForwardRef(Button))
+    aria-controls="fade-menu"
+    aria-haspopup="true"
+    className="menu-button"
+    onClick={[Function]}
+  >
+    Profile
+  </WithStyles(ForwardRef(Button))>
+  <WithStyles(ForwardRef(Menu))
+    TransitionComponent={
+      Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "propTypes": Object {
+          "children": [Function],
+          "in": [Function],
+          "onEnter": [Function],
+          "onExit": [Function],
+          "style": [Function],
+          "timeout": [Function],
+        },
+        "render": [Function],
+      }
+    }
+    anchorEl={null}
+    id="fade-menu"
+    keepMounted={true}
+    onClose={[Function]}
+    open={false}
+  >
+    <WithStyles(ForwardRef(MenuItem))
+      id="saved-exoplanets"
+      onClick={[Function]}
+    >
+      Saved Exoplanets
+    </WithStyles(ForwardRef(MenuItem))>
+    <WithStyles(ForwardRef(MenuItem))
+      id="logout"
+      onClick={[Function]}
+    >
+      Logout
+    </WithStyles(ForwardRef(MenuItem))>
+  </WithStyles(ForwardRef(Menu))>
+</nav>
+`;
+
+exports[`NavigationBar NavigationBar component should match the snapshot when there is no user 1`] = `
+<nav
+  className="NavigationBar"
+>
+  <img
+    alt="exogo logo"
+    className="logo"
+    src="EXOGO.svg"
+  />
+  <Link
+    to="/login"
+  >
+    <WithStyles(ForwardRef(Button))
+      className="menu-button"
+      onClick={[Function]}
+    >
+      Login
+    </WithStyles(ForwardRef(Button))>
+  </Link>
+</nav>
+`;
