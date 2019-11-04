@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# EXOGO
 
-## Available Scripts
+The goal of this project was to use React, Redux, Router, and Asynchronous Javascript to deliver a unique product for am audience which helps them in some way. Using NASA's and Caltech's exoplanet API, I created a site for space nerds to easily sort through exoplanets that would be most enjoyable to live in. Want to experience half the gravity as Earth? There is a planet for you! Want to go from being 40 to 20? Pick a planet with twice the orbital period as Earth! 
 
-In the project directory, you can run:
+I solidified an understanding of React and Redux as well as testing different ways to Route components or containers. Most of my difficulties arose from using the materials ui to incorporate fancy components. Extensive testing and documentation was needed to understand how to pull values and style material ui inputs. 
 
-### `npm start`
+## Setup
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Set up Local Server and Database
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Instructions to set up are linked [here](https://github.com/turingschool-examples/favorites-tracker-api)
 
-### `npm test`
+### Clone Down and Run Locally
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Fork and clone down repo.
 
-### `npm run build`
+Then install the library dependencies. Run:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+npm install
+```
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+In the terminal, run:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm start
+```
 
-### `npm run eject`
+You will see a bunch of lines output to your terminal: 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+Compiled successfully!
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You can now view whats-new in the browser.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+  Local:            http://localhost:3000/
+  On Your Network:  http://10.1.3.3:3000/
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Note that the development build is not optimized.
+To create a production build, use npm run build.
+```
 
-## Learn More
+### Built with:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* HTML5
+* SASS
+* JavaScript
+* React
+* React Router
+* Redux
+* Webpack
+* Materials UI
+* Enzyme
+* Jest
+* NASA API
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Screenshots
 
-### Code Splitting
+![home](https://user-images.githubusercontent.com/25589695/68163574-bc1e1500-ff52-11e9-8770-9186040de6b3.png)
+![login](https://user-images.githubusercontent.com/25589695/68163572-bc1e1500-ff52-11e9-844f-8fc9dc39cde7.png)
+![planet](https://user-images.githubusercontent.com/25589695/68163571-bb857e80-ff52-11e9-801f-474b419ab510.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## Authors
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Noah Gibson, Sara Karsh, Pol Sieira
