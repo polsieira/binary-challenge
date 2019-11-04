@@ -2,7 +2,7 @@
 export const getData = async (url) => {
   const response = await fetch(url);
   if (!response.ok) {
-    throw new Error('There was an error')
+    throw new Error('There was an error fetching data on exoplanets')
   }
   const data = await response.json();
   return data;
@@ -19,7 +19,7 @@ export const attemptCreateUser = async newUser => {
   };
   const response = await fetch(url, options);
   if (!response.ok) {
-    throw new Error('Email address already in use');
+    throw new Error('That username is already associated with another account. Try another email address.');
   }
   return response.json();
 };
@@ -36,7 +36,7 @@ export const attemptLoginUser = async user => {
   console.log(user)
   const response = await fetch(url, options);
   if (!response.ok) {
-    throw new Error('Email and password do not match');
+    throw new Error('Email does not exist or password is incorrect');
   }
   return response.json();
 };
