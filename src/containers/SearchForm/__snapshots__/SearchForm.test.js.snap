@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm SearchForm component should match the snapshot 1`] = `
+<div
+  className="SearchForm"
+>
+  <form
+    className="search-form"
+  >
+    <div
+      className="input"
+    >
+      <WithStyles(ForwardRef(Typography))
+        gutterBottom={true}
+        id="range-slider"
+      >
+        Distance In Lightyears
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Slider))
+        aria-labelledby="range-slider"
+        id="distance"
+        max={100}
+        min={0}
+        name="distance"
+        onChange={[Function]}
+        valueLabelDisplay="auto"
+      />
+    </div>
+    <div
+      className="input"
+    >
+      <WithStyles(ForwardRef(Typography))
+        gutterBottom={true}
+        id="range-slider"
+      >
+        Comparative Gravity
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Slider))
+        aria-labelledby="range-slider"
+        id="gravity"
+        max={100}
+        min={0.0001}
+        name="gravity"
+        onChange={[Function]}
+        valueLabelDisplay="auto"
+      />
+    </div>
+    <div
+      className="input"
+    >
+      <WithStyles(ForwardRef(Typography))
+        gutterBottom={true}
+        id="range-slider"
+        onChange={[Function]}
+      >
+        Length of Year In Days
+      </WithStyles(ForwardRef(Typography))>
+      <WithStyles(ForwardRef(Slider))
+        aria-labelledby="range-slider"
+        id="year"
+        max={2000}
+        min={1}
+        name="year"
+        onChange={[Function]}
+        valueLabelDisplay="auto"
+      />
+    </div>
+    <button
+      className="search-button"
+      type="button"
+    >
+      <SearchIcon
+        className="search-icon"
+      />
+    </button>
+  </form>
+</div>
+`;
