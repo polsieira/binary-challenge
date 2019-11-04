@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExoplanetCard ExoplanetCard component should match the snapshot 1`] = `
+<NavLink
+  className="exoplanet-link"
+  id="Earf"
+  to="exoplanets/Earf"
+>
+  <div
+    className="ExoplanetCard"
+  >
+    <p
+      className="planet-name"
+    >
+      Earf
+    </p>
+    <p
+      className="star-name"
+    >
+      Suuun
+    </p>
+    <p
+      className="orbital-period"
+    >
+      365 days
+    </p>
+    <p
+      className="distance"
+    >
+      10 lightyears
+    </p>
+    <p
+      className="discovery-year"
+    >
+      2000
+    </p>
+  </div>
+</NavLink>
+`;
