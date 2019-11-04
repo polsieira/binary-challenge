@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AccountManager AccountManager component should match a snapshot 1`] = `
+<div
+  className="AccountManager"
+>
+  <div
+    className="modal-container"
+  >
+    <ul
+      className="modal-tabs"
+    >
+      <NavLink
+        className="form-navlink form-navlink--left"
+        onClick={[Function]}
+        to="login"
+      >
+        <li
+          className="login_tab"
+        >
+           Log In
+        </li>
+      </NavLink>
+      <NavLink
+        className="form-navlink form-navlink--right unselected"
+        onClick={[Function]}
+        to="/create-account"
+      >
+        <li
+          className="login_tab"
+        >
+          Create Account
+        </li>
+      </NavLink>
+    </ul>
+    <Route
+      exact={true}
+      path="/login"
+      render={[Function]}
+    />
+    <Route
+      exact={true}
+      path="/create-account"
+      render={[Function]}
+    />
+  </div>
+</div>
+`;
