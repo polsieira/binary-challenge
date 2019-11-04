@@ -84,7 +84,6 @@ export class Login extends Component {
           label="Email"
           autoComplete="current-email"
           margin="normal"
-          variant="filled"
           color="primary"
         />
         <TextField
@@ -93,6 +92,7 @@ export class Login extends Component {
           id='password'
           className='form__input'
           name='password'
+          pattern=".{6,}"
           placeholder='Must have at least 8 characters'
           value={password}
           onChange={e => this.handleChange(e)}

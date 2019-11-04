@@ -41,6 +41,7 @@ exports[`CreateAccount CreateAccount component should match the snapshot 1`] = `
     margin="normal"
     name="password"
     onChange={[Function]}
+    pattern=".{6,}"
     placeholder="Must have at least 8 characters"
     type="password"
     value=""
@@ -97,6 +98,7 @@ exports[`CreateAccount CreateAccount component should match the snapshot when th
     margin="normal"
     name="password"
     onChange={[Function]}
+    pattern=".{6,}"
     placeholder="Must have at least 8 characters"
     type="password"
     value=""

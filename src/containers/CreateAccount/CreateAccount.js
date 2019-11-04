@@ -93,6 +93,7 @@ export class CreateAccount extends Component {
           type="password"
           label="Password"
           id='password'
+          pattern=".{6,}"
           className='form__input'
           name='password'
           placeholder='Must have at least 8 characters'
