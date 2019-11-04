@@ -1,0 +1,45 @@
+.ExoplanetPage {
+  background-image: url('https://www.thelocal.ch/userdata/images/article/9b4ead50aacc44f9099cc1f64ec7e870a33a8fc2625583db0702c53e34fc186d.jpg');
+  height: 100vh;
+  width: 100%;
+
+  .main-info {
+    display: flex;
+
+    .planet-name {
+      color: white;
+      cursor: pointer;
+      font-size: 40px;
+      font-weight: 900;
+      margin: 0px;
+      padding: 40px 0px 0px 40px;
+      text-align: left;
+      text-decoration: none;
+    }
+    .discovery {
+      color: white;
+      font-size: 40px;
+      font-weight: 300;
+      margin: 0px;
+      padding: 40px 0px 0px 10px;
+      text-align: left;
+    }
+  }
+
+  .star-name {
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0px;
+    padding: 10px 45px;
+    text-align: left;
+  }
+
+  .orbital-period,
+  .mass,
+  .distance, 
+  .link {
+    color: white;
+    text-align: left;
+  }
+}

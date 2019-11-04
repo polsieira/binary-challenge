@@ -18,9 +18,9 @@ export class SearchForm extends Component {
     }
   }
 
-  handleChange = event => {
+  handleChange = (event, value, name) => {
     this.setState({
-      [event.target.id]: parseInt(event.target.innerText)
+      [name]: value
     });
   };
 
@@ -40,7 +40,7 @@ export class SearchForm extends Component {
             <Slider
               id="distance"
               name="distance"
-              onChange={this.handleChange}
+              onChange={(event, value, id) => this.handleChange(event, value, "distance")}
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
               min={0}
@@ -54,7 +54,7 @@ export class SearchForm extends Component {
             <Slider
               id="gravity"
               name="gravity"
-              onChange={this.handleChange}
+              onChange={(event, value, id) => this.handleChange(event, value, "gravity")}
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
               min={0.0001}
@@ -62,13 +62,13 @@ export class SearchForm extends Component {
             />
           </div>
           <div className="input">
-            <Typography onChange={this.handleChange} id="range-slider" gutterBottom>
+            <Typography id="range-slider" gutterBottom>
               Length of Year In Days
           </Typography>
             <Slider
               id="year"
               name="year"
-              onChange={this.handleChange}
+              onChange={(event, value, id) => this.handleChange(event, value, "year")}
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
               min={1}
