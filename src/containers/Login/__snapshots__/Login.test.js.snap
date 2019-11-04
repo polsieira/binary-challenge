@@ -13,7 +13,6 @@ exports[`Login Login component should match the snapshot 1`] = `
     autoComplete="current-email"
     className="form__input"
     color="primary"
-    helperText="Incorrect email"
     id="email"
     label="Email"
     margin="normal"
@@ -28,7 +27,6 @@ exports[`Login Login component should match the snapshot 1`] = `
     autoComplete="current-password"
     className="form__input"
     color="secondary"
-    helperText="Incorrect password"
     id="password"
     label="Password"
     margin="normal"
@@ -53,15 +51,14 @@ exports[`Login Login component should match the snapshot when there is an error 
   className="Login"
 >
   <h2
-    className="login-message"
+    className="login-message error-message"
   >
-    <Component />
+    error
   </h2>
   <WithStyles(ForwardRef(TextField))
     autoComplete="current-email"
-    className="form__input form__input--error"
+    className="form__input"
     color="primary"
-    helperText="Incorrect email"
     id="email"
     label="Email"
     margin="normal"
@@ -74,9 +71,8 @@ exports[`Login Login component should match the snapshot when there is an error 
   />
   <WithStyles(ForwardRef(TextField))
     autoComplete="current-password"
-    className="form__input form__input--error"
+    className="form__input"
     color="secondary"
-    helperText="Incorrect password"
     id="password"
     label="Password"
     margin="normal"

@@ -1,4 +1,4 @@
-import AccountManager from './AccountManager'
+import { AccountManager, mapDispatchToProps } from './AccountManager'
 import { shallow } from 'enzyme';
 import React from 'react';
 

@@ -41,7 +41,6 @@ export class Login extends Component {
       });
       hasErrored('');
     } catch ({ message }) {
-      console.log(message)
       checkIsLoading(false);
       hasErrored(message);
     }
@@ -71,40 +70,41 @@ export class Login extends Component {
 
     const { email, password } = this.state;
     const { error } = this.props;
+    console.log(error)
     return (
-        <div className='Login'>
-          <h2 className='login-message'>{error ? { error } : 'Login in with email and password'}</h2>
-          <TextField
-            id='email'
-            type='text'
-            placeholder='your@email.com'
-            className='form__input'
-            name='email'
-            value={email}
-            onChange={e => this.handleChange(e)}
-            label="Email"
-            autoComplete="current-email"
-            margin="normal"
-            variant="filled"
-            color="primary"
-          />
-          <TextField
-            type="password"
-            label="Password"
-            id='password'
-            className='form__input'
-            name='password'
-            placeholder='Must have at least 8 characters'
-            value={password}
-            onChange={e => this.handleChange(e)}
-            autoComplete="current-password"
-            margin="normal"
-            color="secondary"
-          />
-          <Button className='form__button' primary="true" onClick={(event) => this.handleClick(event)}>
-            Login
+      <div className='Login'>
+        <h2 className={error ? 'login-message error-message' : 'login-message'}>{error ? error : 'Login in with email and password'}</h2>
+        <TextField
+          id='email'
+          type='text'
+          placeholder='your@email.com'
+          className='form__input'
+          name='email'
+          value={email}
+          onChange={e => this.handleChange(e)}
+          label="Email"
+          autoComplete="current-email"
+          margin="normal"
+          variant="filled"
+          color="primary"
+        />
+        <TextField
+          type="password"
+          label="Password"
+          id='password'
+          className='form__input'
+          name='password'
+          placeholder='Must have at least 8 characters'
+          value={password}
+          onChange={e => this.handleChange(e)}
+          autoComplete="current-password"
+          margin="normal"
+          color="secondary"
+        />
+        <Button className='form__button' primary="true" onClick={(event) => this.handleClick(event)}>
+          Login
           </Button>
-        </div >
+      </div >
     );
   }
 }

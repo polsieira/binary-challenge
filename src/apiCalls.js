@@ -33,7 +33,6 @@ export const attemptLoginUser = async user => {
     },
     body: JSON.stringify(user)
   };
-  console.log(user)
   const response = await fetch(url, options);
   if (!response.ok) {
     throw new Error('Email does not exist or password is incorrect');

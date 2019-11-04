@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import Login from '../../containers/Login/Login';
 import CreateAccount from '../../containers/CreateAccount/CreateAccount';
+import { hasErrored } from '../../actions';
 import './AccountManager.scss';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 import { Route, NavLink } from 'react-router-dom';
 
-class AccountManager extends Component {
+export class AccountManager extends Component {
   constructor() {
     super();
     this.state = {
@@ -13,6 +16,8 @@ class AccountManager extends Component {
   }
 
   changeSelected = (id) => {
+    const { hasErrored } = this.props;
+    hasErrored('');
     this.setState({ selected: id });
   }
 
@@ -37,4 +42,12 @@ class AccountManager extends Component {
   }
 };
 
-export default AccountManager;
+export const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ hasErrored }, dispatch);
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(AccountManager);
+

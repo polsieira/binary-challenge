@@ -64,7 +64,7 @@ export class CreateAccount extends Component {
     const { error } = this.props;
     return (
       <div className='CreateAccount'>
-        <h2 className='create-account-message'>{error ? { error } : 'Create account with name, email and password'}</h2>
+        <h2 className={error ? 'create-account-message error-message' : 'create-account-message'}>{error ? error : 'Create account with name, email and password'}</h2>
         <TextField
           type="name"
           label="Name"
