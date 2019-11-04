@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ExoplanetContainer ExoplanetContainer component should match the snapshot 1`] = `undefined`;
+
+exports[`ExoplanetContainer ExoplanetContainer component should match the snapshot when isLoading 1`] = `
+<div
+  className="ExoplanetContainer"
+>
+  <p
+    className="loading-message"
+  >
+    Loading exoplanets
+  </p>
+  <ul>
+    <li>
+      Planet Name
+    </li>
+    <li>
+      Local Star
+    </li>
+    <li>
+      Length of Year
+    </li>
+    <li>
+      Distance
+    </li>
+    <li>
+      Discovery Year
+    </li>
+  </ul>
+</div>
+`;
