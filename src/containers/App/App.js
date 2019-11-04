@@ -71,6 +71,7 @@ App.propTypes = {
   checkIsLoading: PropTypes.func,
   error: PropTypes.string,
   isLoading: PropTypes.bool,
+  addExoplanets: PropTypes.func
 }
 
 

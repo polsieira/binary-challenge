@@ -70,7 +70,6 @@ export class Login extends Component {
 
     const { email, password } = this.state;
     const { error } = this.props;
-    console.log(error)
     return (
       <div className='Login'>
         <h2 className={error ? 'login-message error-message' : 'login-message'}>{error ? error : 'Login in with email and password'}</h2>
@@ -130,5 +129,7 @@ export default connect(
 Login.propTypes = {
   error: PropTypes.string,
   isLoading: PropTypes.bool,
-  hasError: PropTypes.func
+  loginUser: PropTypes.func,
+  hasErrored: PropTypes.func,
+  checkIsLoading: PropTypes.func
 }

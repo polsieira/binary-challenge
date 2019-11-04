@@ -6,6 +6,8 @@ import './AccountManager.scss';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Route, NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 
 export class AccountManager extends Component {
   constructor() {
@@ -51,3 +53,6 @@ export default connect(
   mapDispatchToProps
 )(AccountManager);
 
+AccountManager.propTypes = {
+  hasErrored: PropTypes.func,
+}

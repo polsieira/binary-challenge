@@ -74,4 +74,5 @@ export default connect(mapStateToProps, mapDispatchToProps)(NavigationBar);
 
 NavigationBar.propTypes = {
   user: PropTypes.object,
+  loginUser: PropTypes.func
 }

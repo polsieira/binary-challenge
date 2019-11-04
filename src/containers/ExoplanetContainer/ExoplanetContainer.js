@@ -5,6 +5,8 @@ import './ExoplanetContainer.scss';
 import { checkIsLoading } from '../../actions';
 import ExoplanetCard from '../ExoplanetCard/ExoplanetCard';
 import { filterExoplanets } from '../../filterExoplanets';
+import PropTypes from 'prop-types';
+
 
 export const ExoplanetContainer = ({ exoplanets, checkIsLoading, isLoading, filters }) => {
   checkIsLoading(true);
@@ -54,3 +56,10 @@ export const mapDispatchToProps = dispatch => (
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(ExoplanetContainer);
+
+ExoplanetContainer.propTypes = {
+  exoplanets: PropTypes.array,
+  checkIsLoading: PropTypes.func,
+  isLoading: PropTypes.bool,
+  filters: PropTypes.object,
+};

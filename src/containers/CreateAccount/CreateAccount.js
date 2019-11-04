@@ -125,6 +125,7 @@ export default connect(
 
 CreateAccount.propTypes = {
   error: PropTypes.string,
+  loginUser: PropTypes.func,
   hasErrored: PropTypes.func,
   isLoading: PropTypes.bool,
   checkIsLoading: PropTypes.func,
