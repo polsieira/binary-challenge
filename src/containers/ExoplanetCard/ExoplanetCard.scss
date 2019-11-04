@@ -1,0 +1,17 @@
+.exoplanet-link {
+  color: black;
+  text-decoration: none;
+}
+
+.ExoplanetCard {
+  border-bottom: grey solid 1px;
+  cursor: pointer;
+  display: flex;
+  p {
+    width: 20%;
+  }
+
+  &:hover {
+    background-color: grey;
+  }
+}
