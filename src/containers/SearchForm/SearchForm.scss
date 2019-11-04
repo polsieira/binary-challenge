@@ -1,0 +1,50 @@
+.SearchForm {
+
+  .search-form {
+    background: white;
+    bottom: 50px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+    position: relative;
+    width: 90%;
+
+    .input {
+      align-content: flex-end;
+      border-radius: 4px;
+      display: flex;
+      font-size: 10px;
+      flex-direction: column;
+      justify-content: flex-end;
+      margin: 20px;
+      padding: 10px;
+      width: 180px;
+
+      .MuiTypography-body1 {
+        font-size: 16px;
+      }
+
+    }
+    .search-button {
+      background-color: #3F51B5;
+      border: #3F51B5 solid 2px;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      width: 80px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.8;
+      }
+    }
+
+    .search-icon {
+      cursor: pointer;
+      pointer-events: none;
+
+    }
+  }
+}
