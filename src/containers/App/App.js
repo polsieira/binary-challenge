@@ -9,23 +9,27 @@ import { bindActionCreators } from 'redux';
 import PropTypes from 'prop-types';
 import { getData } from '../../apiCalls';
 import { checkIsLoading, hasErrored, addExoplanets } from '../../actions';
+import ExoplanetContainer from '../ExoplanetContainer/ExoplanetContainer';
+import Welcome from '../../components/Welcome/Welcome';
+import SearchForm from '../SearchForm/SearchForm';
+import ExoplanetPage from '../ExoplanetPage/ExoplanetPage';
 
-class App extends Component {
+export class App extends Component {
 
   async componentDidMount() {
     const { checkIsLoading, hasErrored, addExoplanets } = this.props;
     const apiBaseUrl = "https://exoplanetarchive.ipac.caltech.edu/cgi-bin/nstedAPI/nph-nstedAPI?";
     // const api_key = "";
     const table = "table=exoplanets";
-    const columns = "&select=pl_hostname,pl_orbper,pl_bmassj,pl_masse,pl_radj,pl_rade,pl_nnotes,st_dist,pl_eqt,pl_disc,pl_mnum,pl_pelink,pl_edelink";
+    const columns = "&select=pl_name,pl_hostname,pl_orbper,pl_bmassj,pl_masse,pl_radj,pl_rade,pl_nnotes,st_dist,gaia_dist,pl_eqt,pl_disc,pl_mnum,pl_pelink,pl_edelink,pl_dens";
     const parameters = "&order=dec";
     const format = "&format=json"
     const url = `${apiBaseUrl}${table}${columns}${parameters}${format}`;
     try {
       checkIsLoading(true);
       const data = await getData(url);
-      checkIsLoading(false);
       addExoplanets(data);
+      checkIsLoading(false);
     } catch ({ message }) {
       checkIsLoading(false);
       hasErrored(message);
@@ -35,9 +39,13 @@ class App extends Component {
   render() {
     return (
       <main className='App'>
-        <NavigationBar />
-        <Route path='/account' render={() => (<AccountManager />)} />
-        <Footer />
+        <Route exact path='/' render={() => (<NavigationBar />)} />
+        <Route exact path='/' render={() => (<Welcome />)} />
+        <Route exact path='/' render={() => (<SearchForm />)} />
+        <Route exact path='/' render={() => (<ExoplanetContainer />)} />
+        <Route exact path='/' render={() => (<Footer />)} />
+        <Route exact path='/exoplanets/:planet' render={(match) => (<ExoplanetPage match={match} />)} />
+        <Route exact path='/(login|create-account)' render={() => (<AccountManager />)} />
       </main>
     )
   }
