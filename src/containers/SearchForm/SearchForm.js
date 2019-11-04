@@ -59,8 +59,9 @@ export class SearchForm extends Component {
               valueLabelDisplay="auto"
               aria-labelledby="range-slider"
               track="inverted"
-              min={0.0001}
-              max={100}
+              min={0.001}
+              max={2}
+              step={0.02}
             />
           </div>
           <div className="input">

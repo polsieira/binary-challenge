@@ -4,11 +4,58 @@ exports[`ExoplanetPage ExoplanetPage component should match the snapshot 1`] = `
 <div
   className="ExoplanetPage"
 >
-  <p>
-    exoplanet
-  </p>
-  <p>
+  <div
+    className="main-info"
+  >
+    <a
+      className="planet-name"
+    >
+      exoplanet
+    </a>
+    <p
+      className="discovery"
+    >
+       | 2005
+    </p>
+  </div>
+  <p
+    className="star-name"
+  >
     star
   </p>
+  <div
+    className="data"
+  >
+    <p
+      className="label"
+    >
+      Orbital Period:
+    </p>
+    <p
+      className="orbital-period"
+    >
+      2000 days
+    </p>
+    <p
+      className="label"
+    >
+      Mass:
+    </p>
+    <p
+      className="mass"
+    >
+      Mass: undefined Mass of Jupiter
+    </p>
+    <p
+      className="label"
+    >
+      Distance To:
+    </p>
+    <p
+      className="distance"
+    >
+      100 light years
+    </p>
+  </div>
 </div>
 `;

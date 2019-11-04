@@ -23,6 +23,7 @@ exports[`SearchForm SearchForm component should match the snapshot 1`] = `
         min={0}
         name="distance"
         onChange={[Function]}
+        track="inverted"
         valueLabelDisplay="auto"
       />
     </div>
@@ -42,6 +43,7 @@ exports[`SearchForm SearchForm component should match the snapshot 1`] = `
         min={0.0001}
         name="gravity"
         onChange={[Function]}
+        track="inverted"
         valueLabelDisplay="auto"
       />
     </div>
@@ -51,7 +53,6 @@ exports[`SearchForm SearchForm component should match the snapshot 1`] = `
       <WithStyles(ForwardRef(Typography))
         gutterBottom={true}
         id="range-slider"
-        onChange={[Function]}
       >
         Length of Year In Days
       </WithStyles(ForwardRef(Typography))>
@@ -62,6 +63,7 @@ exports[`SearchForm SearchForm component should match the snapshot 1`] = `
         min={1}
         name="year"
         onChange={[Function]}
+        track="inverted"
         valueLabelDisplay="auto"
       />
     </div>

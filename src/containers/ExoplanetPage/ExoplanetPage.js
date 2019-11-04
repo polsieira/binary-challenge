@@ -15,9 +15,14 @@ export const ExoplanetPage = ({ match, exoplanets }) => {
         <p className='discovery'>{` | ${pl_disc}`}</p>
       </div>
       <p className='star-name'>{pl_hostname}</p>
-      <p className='orbital-period'>{`Orbital Period: ${pl_orbper}`}</p>
-      <p className='mass'>{`Mass: ${pl_bmassj}`}</p>
-      <p className='distance'>{`Distance To: ${gaia_dist}`}</p>
+      <div className='data'>
+        <p className='label'>{'Orbital Period:'}</p>
+        <p className='orbital-period'>{`${pl_orbper} days`}</p>
+        <p className='label'>{'Mass:'}</p>
+        <p className='mass'>{`Mass: ${pl_bmassj} Mass of Jupiter`}</p>
+        <p className='label'>{'Distance To:'}</p>
+        <p className='distance'>{`${gaia_dist} light years`}</p>
+      </div>
     </div>
   )
 }

@@ -35,11 +35,17 @@
     text-align: left;
   }
 
-  .orbital-period,
-  .mass,
-  .distance, 
-  .link {
-    color: white;
-    text-align: left;
+  .data {
+    padding: 40px 0px 0px 45px;
+
+    .label,
+    .orbital-period,
+    .mass,
+    .distance, 
+    .link {
+      color: white;
+      text-align: left;
+    }
   }
+
 }
