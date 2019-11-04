@@ -69,7 +69,7 @@ export class CreateAccount extends Component {
           type="name"
           label="Name"
           id='name'
-          className={error ? 'form__input form__input--error' : 'form__input'}
+          className='form__input'
           name='name'
           placeholder="John Smith"
           value={name}
@@ -81,7 +81,7 @@ export class CreateAccount extends Component {
           id='email'
           type='text'
           placeholder='your@email.com'
-          className={error ? 'form__input form__input--error' : 'form__input'}
+          className='form__input'
           name='email'
           value={email}
           onChange={e => this.handleChange(e)}
@@ -93,7 +93,7 @@ export class CreateAccount extends Component {
           type="password"
           label="Password"
           id='password'
-          className={error ? 'form__input form__input--error' : 'form__input'}
+          className='form__input'
           name='password'
           placeholder='Must have at least 8 characters'
           value={password}
