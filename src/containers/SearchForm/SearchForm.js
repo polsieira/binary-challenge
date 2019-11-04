@@ -22,8 +22,12 @@ export class SearchForm extends Component {
     this.setState({
       [event.target.id]: parseInt(event.target.innerText)
     });
-    addFilters(this.state);
   };
+
+  handleClick = () => {
+    const { addFilters } = this.props;
+    addFilters(this.state);
+  }
 
   render() {
     return (
@@ -71,7 +75,7 @@ export class SearchForm extends Component {
               max={2000}
             />
           </div>
-          <button type="button" className="search-button">
+          <button type="button" className="search-button" onClick={this.handleClick}>
             <SearchIcon className="search-icon" />
           </button>
         </form>
