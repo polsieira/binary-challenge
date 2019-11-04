@@ -62,4 +62,4 @@ To create a production build, use npm run build.
 
 ## Authors
 
-Noah Gibson, Sara Karsh, Pol Sieira
+Pol Sieira: Github <https://github.com/polsieira>
