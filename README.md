@@ -42,13 +42,10 @@ To create a production build, use npm run build.
 
 ### Built with:
 
-* HTML5
-* SASS
-* JavaScript
 * React
 * React Router
 * Redux
-* Webpack
+* SASS
 * Materials UI
 * Enzyme
 * Jest
@@ -62,4 +59,4 @@ To create a production build, use npm run build.
 
 ## Authors
 
-Pol Sieira: Github <https://github.com/polsieira>
+[Pol Sieira](https://github.com/polsieira)
